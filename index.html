@@ -1,0 +1,1205 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>امتحان كروت Sprechen A1 - معهد غوته (التصحيح المباشر لجملة الطالب)</title>
+  <!-- Font Awesome Icons -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Tajawal:wght@400;500;700;900&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --bg-color: #0f172a;
+      --card-bg: #1e293b;
+      --accent-blue: #00d2ff;
+      --neon-blue-glow: 0 0 15px rgba(0, 210, 255, 0.6), 0 0 30px rgba(0, 210, 255, 0.4);
+      --neon-green-glow: 0 0 15px rgba(16, 185, 129, 0.6), 0 0 30px rgba(16, 185, 129, 0.4);
+      --neon-red-glow: 0 0 15px rgba(239, 68, 68, 0.6), 0 0 30px rgba(239, 68, 68, 0.4);
+      --text-color: #f8fafc;
+      --border-radius: 16px;
+    }
+
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+      font-family: 'Tajawal', sans-serif;
+    }
+
+    body {
+      background-color: var(--bg-color);
+      color: var(--text-color);
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      padding: 20px 15px;
+      overflow-x: hidden;
+    }
+
+    .container {
+      width: 100%;
+      max-width: 650px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 20px;
+    }
+
+    /* Glow Box Effect */
+    .glow-box {
+      background: var(--card-bg);
+      border: 2px solid var(--accent-blue);
+      box-shadow: var(--neon-blue-glow);
+      border-radius: var(--border-radius);
+      position: relative;
+      overflow: hidden;
+      transition: all 0.3s ease;
+    }
+
+    /* Shiny / Luster Effect */
+    .shiny-effect {
+      position: relative;
+      overflow: hidden;
+    }
+    .shiny-effect::after {
+      content: '';
+      position: absolute;
+      top: -50%;
+      left: -60%;
+      width: 40%;
+      height: 200%;
+      background: linear-gradient(
+        to right,
+        rgba(255, 255, 255, 0) 0%,
+        rgba(255, 255, 255, 0.4) 50%,
+        rgba(255, 255, 255, 0) 100%
+      );
+      transform: rotate(30deg);
+      animation: shine 4s infinite;
+    }
+
+    @keyframes shine {
+      0% { left: -60%; }
+      20% { left: 120%; }
+      100% { left: 120%; }
+    }
+
+    /* Header Title */
+    .header-box {
+      width: 100%;
+      text-align: center;
+      padding: 18px 10px;
+    }
+    .header-box h1 {
+      font-size: 24px;
+      font-weight: 900;
+      color: #ffffff;
+      text-shadow: 0 0 10px var(--accent-blue);
+      letter-spacing: 1px;
+    }
+
+    /* Flag Section */
+    .flag-box {
+      width: 100%;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      padding: 25px 10px;
+      background: rgba(30, 41, 59, 0.8);
+    }
+
+    .flag-wrapper {
+      perspective: 1000px;
+      width: 220px;
+      height: 140px;
+    }
+
+    .waving-flag {
+      width: 100%;
+      height: 100%;
+      border-radius: 8px;
+      box-shadow: 0 10px 25px rgba(0,0,0,0.5);
+      background: linear-gradient(to bottom, #000000 33.3%, #DD0000 33.3%, #DD0000 66.6%, #FFCC00 66.6%);
+      animation: wave 3s ease-in-out infinite alternate;
+      transform-origin: left center;
+      position: relative;
+      border: 1px solid rgba(255,255,255,0.2);
+    }
+
+    @keyframes wave {
+      0% { transform: rotateY(-12deg) rotateX(5deg) skewY(-2deg); }
+      50% { transform: rotateY(12deg) rotateX(-5deg) skewY(2deg); }
+      100% { transform: rotateY(-12deg) rotateX(5deg) skewY(-2deg); }
+    }
+
+    /* Author Info */
+    .author-title {
+      font-size: 20px;
+      font-weight: 700;
+      color: #e2e8f0;
+      text-align: center;
+      margin-top: 5px;
+    }
+
+    /* Social Media Glow Boxes */
+    .social-container {
+      width: 100%;
+      display: flex;
+      justify-content: center;
+      gap: 15px;
+      flex-wrap: wrap;
+    }
+
+    .social-box {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      padding: 10px 18px;
+      text-decoration: none;
+      color: #fff;
+      font-weight: 600;
+      font-size: 15px;
+      border-radius: 12px;
+      background: #1e293b;
+      border: 1.5px solid var(--accent-blue);
+      box-shadow: 0 0 10px rgba(0, 210, 255, 0.3);
+      transition: all 0.3s ease;
+    }
+    .social-box:hover {
+      transform: translateY(-3px) scale(1.03);
+      box-shadow: var(--neon-blue-glow);
+    }
+    .social-box i {
+      font-size: 20px;
+    }
+    .social-telegram i { color: #24A1DE; }
+    .social-tiktok i { color: #ff0050; }
+    .social-instagram i { color: #E1306C; }
+
+    /* Action Buttons (Dictionary & Reset) */
+    .actions-container {
+      width: 100%;
+      display: flex;
+      gap: 15px;
+    }
+
+    .btn-action {
+      flex: 1;
+      padding: 14px 10px;
+      border: none;
+      border-radius: var(--border-radius);
+      font-size: 16px;
+      font-weight: 700;
+      cursor: pointer;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 8px;
+      color: white;
+      transition: all 0.3s ease;
+      box-shadow: 0 4px 15px rgba(0,0,0,0.3);
+    }
+
+    .btn-dictionary {
+      background: linear-gradient(135deg, #0284c7, #0369a1);
+      border: 1.5px solid #38bdf8;
+      box-shadow: 0 0 12px rgba(56, 189, 248, 0.4);
+    }
+    .btn-dictionary:hover {
+      box-shadow: 0 0 20px rgba(56, 189, 248, 0.7);
+      transform: translateY(-2px);
+    }
+
+    .btn-reset {
+      background: linear-gradient(135deg, #475569, #334155);
+      border: 1.5px solid #94a3b8;
+    }
+    .btn-reset:hover {
+      background: linear-gradient(135deg, #64748b, #475569);
+      transform: translateY(-2px);
+    }
+
+    /* Main Quiz Card Area */
+    .quiz-card {
+      width: 100%;
+      padding: 25px 20px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 18px;
+      min-height: 380px;
+    }
+
+    .card-progress {
+      font-size: 14px;
+      color: #94a3b8;
+      font-weight: 700;
+      background: rgba(15, 23, 42, 0.6);
+      padding: 6px 16px;
+      border-radius: 20px;
+      border: 1px solid rgba(255,255,255,0.1);
+    }
+
+    .word-display {
+      font-size: 32px;
+      font-weight: 900;
+      color: #38bdf8;
+      text-shadow: 0 0 10px rgba(56, 189, 248, 0.5);
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      margin: 5px 0;
+    }
+
+    .audio-btn-main {
+      background: rgba(56, 189, 248, 0.2);
+      border: 1px solid #38bdf8;
+      color: #38bdf8;
+      width: 44px;
+      height: 44px;
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      cursor: pointer;
+      font-size: 18px;
+      transition: all 0.2s;
+    }
+    .audio-btn-main:hover {
+      background: #38bdf8;
+      color: #0f172a;
+      box-shadow: 0 0 15px #38bdf8;
+    }
+
+    .word-translation {
+      font-size: 18px;
+      color: #cbd5e1;
+      background: rgba(255,255,255,0.05);
+      padding: 6px 18px;
+      border-radius: 8px;
+      margin-bottom: 5px;
+    }
+
+    .prompt-notice {
+      background: rgba(234, 179, 8, 0.15);
+      border: 1.5px solid #eab308;
+      color: #fde047;
+      padding: 10px 15px;
+      border-radius: 10px;
+      font-size: 15px;
+      font-weight: 700;
+      width: 100%;
+      text-align: center;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 8px;
+    }
+
+    /* Verification Button shiny above textarea */
+    .btn-verify {
+      width: 100%;
+      padding: 14px;
+      background: linear-gradient(135deg, #10b981, #059669);
+      border: 1.5px solid #34d399;
+      color: white;
+      font-size: 17px;
+      font-weight: 700;
+      border-radius: 12px;
+      cursor: pointer;
+      box-shadow: 0 0 15px rgba(16, 185, 129, 0.4);
+      transition: all 0.3s ease;
+    }
+    .btn-verify:hover {
+      box-shadow: 0 0 25px rgba(16, 185, 129, 0.7);
+      transform: translateY(-2px);
+    }
+
+    /* Textarea Box */
+    .input-box {
+      width: 100%;
+    }
+
+    .input-box textarea {
+      width: 100%;
+      height: 90px;
+      background: rgba(15, 23, 42, 0.8);
+      border: 1.5px solid #475569;
+      border-radius: 12px;
+      padding: 12px;
+      color: #f8fafc;
+      font-size: 16px;
+      resize: none;
+      outline: none;
+      direction: ltr;
+      text-align: left;
+      transition: border 0.3s;
+    }
+    .input-box textarea:focus {
+      border-color: var(--accent-blue);
+      box-shadow: 0 0 10px rgba(0, 210, 255, 0.3);
+    }
+
+    /* Notification Alerts (Popup Toasts) */
+    .toast-alert {
+      position: fixed;
+      top: 20px;
+      left: 50%;
+      transform: translateX(-50%);
+      z-index: 2000;
+      padding: 14px 28px;
+      border-radius: 30px;
+      font-size: 16px;
+      font-weight: 700;
+      text-align: center;
+      display: none;
+      box-shadow: 0 10px 25px rgba(0,0,0,0.5);
+      animation: slideDown 0.3s ease;
+    }
+    @keyframes slideDown {
+      from { opacity: 0; transform: translate(-50%, -20px); }
+      to { opacity: 1; transform: translate(-50%, 0); }
+    }
+    .toast-success {
+      background: #10b981;
+      border: 2px solid #34d399;
+      color: #ffffff;
+      box-shadow: var(--neon-green-glow);
+    }
+    .toast-error {
+      background: #ef4444;
+      border: 2px solid #fca5a5;
+      color: #ffffff;
+      box-shadow: var(--neon-red-glow);
+    }
+
+    /* Permanent Explanation Box for wrong answer */
+    .explanation-box {
+      width: 100%;
+      background: rgba(239, 68, 68, 0.12);
+      border: 1.5px solid #ef4444;
+      border-radius: 12px;
+      padding: 15px;
+      color: #f8fafc;
+      display: none;
+      font-size: 14px;
+      line-height: 1.7;
+    }
+    .explanation-title {
+      font-weight: 700;
+      color: #fca5a5;
+      margin-bottom: 6px;
+      font-size: 15px;
+      display: flex;
+      align-items: center;
+      gap: 6px;
+    }
+    .correct-sentence-box {
+      background: rgba(0,0,0,0.4);
+      border-right: 4px solid #38bdf8;
+      padding: 10px 14px;
+      border-radius: 6px;
+      color: #38bdf8;
+      font-family: monospace;
+      font-size: 15px;
+      margin-top: 10px;
+      direction: ltr;
+      text-align: left;
+    }
+
+    /* Dictionary Modal Window */
+    .modal-overlay {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100vw;
+      height: 100vh;
+      background: rgba(0, 0, 0, 0.8);
+      backdrop-filter: blur(6px);
+      display: none;
+      justify-content: center;
+      align-items: center;
+      z-index: 1000;
+    }
+
+    .modal-content {
+      width: 92%;
+      max-width: 650px;
+      height: 85vh;
+      background: #1e293b;
+      border: 2px solid var(--accent-blue);
+      box-shadow: var(--neon-blue-glow);
+      border-radius: var(--border-radius);
+      display: flex;
+      flex-direction: column;
+      padding: 20px;
+      position: relative;
+    }
+
+    .modal-header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      border-bottom: 1px solid #334155;
+      padding-bottom: 12px;
+      margin-bottom: 15px;
+    }
+
+    .modal-header h2 {
+      color: #38bdf8;
+      font-size: 19px;
+      display: flex;
+      align-items: center;
+      gap: 8px;
+    }
+
+    .btn-close {
+      background: #ef4444;
+      border: none;
+      color: white;
+      width: 32px;
+      height: 32px;
+      border-radius: 50%;
+      cursor: pointer;
+      font-size: 16px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      transition: transform 0.2s;
+    }
+    .btn-close:hover {
+      transform: scale(1.1);
+    }
+
+    .search-box {
+      width: 100%;
+      margin-bottom: 12px;
+    }
+    .search-box input {
+      width: 100%;
+      padding: 10px 15px;
+      border-radius: 8px;
+      border: 1px solid #475569;
+      background: #0f172a;
+      color: #fff;
+      font-size: 15px;
+    }
+
+    .dict-count-badge {
+      font-size: 13px;
+      color: #94a3b8;
+      margin-bottom: 10px;
+    }
+
+    .dictionary-list {
+      flex: 1;
+      overflow-y: auto;
+      display: flex;
+      flex-direction: column;
+      gap: 8px;
+      padding-left: 5px;
+    }
+
+    .dict-item {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      background: rgba(15, 23, 42, 0.6);
+      padding: 10px 15px;
+      border-radius: 8px;
+      border: 1px solid #334155;
+    }
+    .dict-item:hover {
+      border-color: var(--accent-blue);
+    }
+
+    .dict-de {
+      font-weight: 700;
+      color: #38bdf8;
+      font-size: 16px;
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      direction: ltr;
+    }
+    .dict-ar {
+      color: #cbd5e1;
+      font-size: 15px;
+    }
+
+    .audio-icon-small {
+      color: #38bdf8;
+      cursor: pointer;
+      font-size: 15px;
+      padding: 4px;
+      transition: transform 0.2s;
+    }
+    .audio-icon-small:hover {
+      transform: scale(1.2);
+    }
+
+    @keyframes fadeIn {
+      from { opacity: 0; transform: translateY(-5px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Floating Popup Alerts -->
+  <div class="toast-alert toast-success" id="toastSuccess">
+    <i class="fa-solid fa-circle-check"></i> إجابة صحيحة ممتاز! 🎉
+  </div>
+  <div class="toast-alert toast-error" id="toastError">
+    <i class="fa-solid fa-circle-xmark"></i> إجابة خاطئة! راجع تصحيح جملتك بالأسفل ❌
+  </div>
+
+  <div class="container">
+
+    <!-- Header Box -->
+    <div class="glow-box shiny-effect header-box">
+      <h1>امتحان كروت Sprechen A1 ⚡</h1>
+    </div>
+
+    <!-- Germany Flag Box -->
+    <div class="glow-box flag-box">
+      <div class="flag-wrapper">
+        <div class="waving-flag"></div>
+      </div>
+    </div>
+
+    <!-- Author Title -->
+    <div class="author-title">
+      إعداد : علي خليل ✨
+    </div>
+
+    <!-- Social Media Accounts -->
+    <div class="social-container">
+      <a href="https://t.me/Ss4ee1" target="_blank" class="social-box social-telegram shiny-effect">
+        <i class="fa-brands fa-telegram"></i>
+        <span>Ss4ee1</span>
+      </a>
+      <a href="https://www.tiktok.com/@eezuui" target="_blank" class="social-box social-tiktok shiny-effect">
+        <i class="fa-brands fa-tiktok"></i>
+        <span>eezuui</span>
+      </a>
+      <a href="https://www.instagram.com/eezuui" target="_blank" class="social-box social-instagram shiny-effect">
+        <i class="fa-brands fa-instagram"></i>
+        <span>eezuui</span>
+      </a>
+    </div>
+
+    <!-- Action Buttons: Dictionary & Reset -->
+    <div class="actions-container">
+      <button class="btn-action btn-dictionary shiny-effect" onclick="openDictionary()">
+        <i class="fa-solid fa-book-bookmark"></i> القاموس الشامل (1500+ كلمة)
+      </button>
+      <button class="btn-action btn-reset" onclick="resetExam()">
+        <i class="fa-solid fa-rotate-right"></i> إعادة الامتحان (كلمات عشوائية جديدة)
+      </button>
+    </div>
+
+    <!-- Quiz Card Box -->
+    <div class="glow-box quiz-card" id="quizCard">
+      <div class="card-progress" id="cardProgress">الكارت 1 من 5</div>
+      
+      <div class="word-display">
+        <span id="cardWord">Wasser</span>
+        <button class="audio-btn-main" onclick="playAudioCurrentWord()" title="استمع لنطق الكلمة بصوت بنت">
+          <i class="fa-solid fa-volume-high"></i>
+        </button>
+      </div>
+
+      <div class="word-translation" id="cardTranslation">ماء</div>
+
+      <div class="prompt-notice" id="promptNotice">
+        <i class="fa-solid fa-triangle-exclamation" style="color: #fde047;"></i>
+        <span id="noticeText">أدخل هذه الكلمة بجملة صحيحة</span>
+      </div>
+
+      <!-- Verification Button with exact text "اضغط هنا للتحقق" -->
+      <button class="btn-verify shiny-effect" onclick="checkAnswer()">
+        <i class="fa-solid fa-circle-check"></i> اضغط هنا للتحقق
+      </button>
+
+      <!-- Input Text Area -->
+      <div class="input-box">
+        <textarea id="userAnswer" placeholder="اكتب جملتك هنا .."></textarea>
+      </div>
+
+      <!-- Permanent Explanation Box -->
+      <div class="explanation-box" id="explanationBox">
+        <div class="explanation-title">
+          <i class="fa-solid fa-circle-info"></i> تصحيح جملتك شخصياً (الصيغة الصحيحة لما كتبته):
+        </div>
+        <div id="explanationText"></div>
+        <div class="correct-sentence-box">
+          <strong style="color:#f8fafc; display:block; margin-bottom:4px;">جملتك بعد تصحيح الأخطاء النحوية وتصريف الأفعال:</strong>
+          <span id="correctSentenceText"></span>
+        </div>
+      </div>
+
+    </div>
+
+  </div>
+
+  <!-- Dictionary Modal -->
+  <div class="modal-overlay" id="dictModal">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h2><i class="fa-solid fa-book"></i> قاموس المستوى الأول A1 الشامل (1500 كلمة)</h2>
+        <button class="btn-close" onclick="closeDictionary()"><i class="fa-solid fa-xmark"></i></button>
+      </div>
+      <div class="search-box">
+        <input type="text" id="dictSearch" placeholder="بحث عن كلمة بالألمانية أو العربية..." oninput="filterDictionary()">
+      </div>
+      <div class="dict-count-badge" id="dictCount">يتم عرض الكلمات...</div>
+      <div class="dictionary-list" id="dictList"></div>
+    </div>
+  </div>
+
+  <script>
+    // Audio synthesis for Female German speech
+    function speakGerman(text) {
+      if ('speechSynthesis' in window) {
+        window.speechSynthesis.cancel();
+        const cleanText = text.replace(/^(der|die|das)\s+/i, '');
+        const utterance = new SpeechSynthesisUtterance(cleanText);
+        utterance.lang = 'de-DE';
+        
+        const voices = window.speechSynthesis.getVoices();
+        const femaleVoice = voices.find(v => v.lang.includes('de') && (v.name.includes('Female') || v.name.includes('Hedda') || v.name.includes('Katja') || v.name.includes('Mady') || v.name.includes('Google Deutsch') || v.name.includes('Vicki') || v.name.includes('Amala')));
+        if (femaleVoice) {
+          utterance.voice = femaleVoice;
+        }
+        utterance.pitch = 1.2;
+        utterance.rate = 0.88;
+        window.speechSynthesis.speak(utterance);
+      }
+    }
+
+    // Audio feedback sounds
+    function playSound(type) {
+      try {
+        const ctx = new (window.AudioContext || window.webkitAudioContext)();
+        const osc = ctx.createOscillator();
+        const gain = ctx.createGain();
+        osc.connect(gain);
+        gain.connect(ctx.destination);
+
+        if (type === 'correct') {
+          osc.type = 'sine';
+          osc.frequency.setValueAtTime(523.25, ctx.currentTime);
+          osc.frequency.setValueAtTime(659.25, ctx.currentTime + 0.1);
+          osc.frequency.setValueAtTime(783.99, ctx.currentTime + 0.2);
+          gain.gain.setValueAtTime(0.3, ctx.currentTime);
+          gain.gain.exponentialRampToValueAtTime(0.01, ctx.currentTime + 0.45);
+          osc.start();
+          osc.stop(ctx.currentTime + 0.45);
+        } else {
+          osc.type = 'sawtooth';
+          osc.frequency.setValueAtTime(220, ctx.currentTime);
+          osc.frequency.setValueAtTime(164.81, ctx.currentTime + 0.15);
+          gain.gain.setValueAtTime(0.3, ctx.currentTime);
+          gain.gain.exponentialRampToValueAtTime(0.01, ctx.currentTime + 0.5);
+          osc.start();
+          osc.stop(ctx.currentTime + 0.5);
+        }
+      } catch(e) {}
+    }
+
+    // --- قاعدة بيانات القواعد الشاملة للمستوى الأول A1 ---
+    const A1GrammarRulesEngine = {
+      nouns: {
+        "apfel": { gender: "der", indef: "einen", art: "der" },
+        "kaffee": { gender: "der", indef: "einen", art: "der" },
+        "tee": { gender: "der", indef: "einen", art: "der" },
+        "stift": { gender: "der", indef: "einen", art: "der" },
+        "tisch": { gender: "der", indef: "einen", art: "der" },
+        "stuhl": { gender: "der", indef: "einen", art: "der" },
+        "hund": { gender: "der", indef: "einen", art: "der" },
+        "vater": { gender: "der", indef: "einen", art: "der" },
+        "bruder": { gender: "der", indef: "einen", art: "der" },
+        "freund": { gender: "der", indef: "einen", art: "der" },
+        "sport": { gender: "der", indef: "einen", art: "der" },
+        "monat": { gender: "der", indef: "einen", art: "der" },
+        "computer": { gender: "der", indef: "einen", art: "der" },
+        "bahnhof": { gender: "der", indef: "einen", art: "der" },
+        "flughafen": { gender: "der", indef: "einen", art: "der" },
+        "markt": { gender: "der", indef: "einen", art: "der" },
+        "supermarkt": { gender: "der", indef: "einen", art: "der" },
+        "arzt": { gender: "der", indef: "einen", art: "der" },
+        "park": { gender: "der", indef: "einen", art: "der" },
+        "baum": { gender: "der", indef: "einen", art: "der" },
+        "regen": { gender: "der", indef: "einen", art: "der" },
+        "schnee": { gender: "der", indef: "einen", art: "der" },
+        "saft": { gender: "der", indef: "einen", art: "der" },
+        "zucker": { gender: "der", indef: "einen", art: "der" },
+        "salz": { gender: "der", indef: "einen", art: "der" },
+        "fisch": { gender: "der", indef: "einen", art: "der" },
+        
+        "katze": { gender: "die", indef: "eine", art: "die" },
+        "schule": { gender: "die", indef: "eine", art: "die" },
+        "arbeit": { gender: "die", indef: "eine", art: "die" },
+        "musik": { gender: "die", indef: "eine", art: "die" },
+        "familie": { gender: "die", indef: "eine", art: "die" },
+        "woche": { gender: "die", indef: "eine", art: "die" },
+        "uhr": { gender: "die", indef: "eine", art: "die" },
+        "stadt": { gender: "die", indef: "eine", art: "die" },
+        "straße": { gender: "die", indef: "eine", art: "die" },
+        "apotheke": { gender: "die", indef: "eine", art: "die" },
+        "bibliothek": { gender: "die", indef: "eine", art: "die" },
+        "milch": { gender: "die", indef: "eine", art: "die" },
+        "mutter": { gender: "die", indef: "eine", art: "die" },
+        "schwester": { gender: "die", indef: "eine", art: "die" },
+        "küche": { gender: "die", indef: "eine", art: "die" },
+        "tür": { gender: "die", indef: "eine", art: "die" },
+        "lampe": { gender: "die", indef: "eine", art: "die" },
+        "zeit": { gender: "die", indef: "eine", art: "die" },
+        "erdbeere": { gender: "die", indef: "eine", art: "die" },
+        "banane": { gender: "die", indef: "eine", art: "die" },
+        "orange": { gender: "die", indef: "eine", art: "die" },
+        
+        "wasser": { gender: "das", indef: "ein", art: "das" },
+        "buch": { gender: "das", indef: "ein", art: "das" },
+        "auto": { gender: "das", indef: "ein", art: "das" },
+        "haus": { gender: "das", indef: "ein", art: "das" },
+        "zimmer": { gender: "das", indef: "ein", art: "das" },
+        "bad": { gender: "das", indef: "ein", art: "das" },
+        "bett": { gender: "das", indef: "ein", art: "das" },
+        "geld": { gender: "das", indef: "ein", art: "das" },
+        "telefon": { gender: "das", indef: "ein", art: "das" },
+        "fenster": { gender: "das", indef: "ein", art: "das" },
+        "krankenhaus": { gender: "das", indef: "ein", art: "das" },
+        "museum": { gender: "das", indef: "ein", art: "das" },
+        "hotel": { gender: "das", indef: "ein", art: "das" },
+        "restaurant": { gender: "das", indef: "ein", art: "das" },
+        "frühstück": { gender: "das", indef: "ein", art: "das" },
+        "mittagessen": { gender: "das", indef: "ein", art: "das" },
+        "abendessen": { gender: "das", indef: "ein", art: "das" },
+        "brot": { gender: "das", indef: "ein", art: "das" },
+        "fleisch": { gender: "das", indef: "ein", art: "das" },
+        "gemüse": { gender: "das", indef: "ein", art: "das" },
+        "obst": { gender: "das", indef: "ein", art: "das" }
+      },
+
+      verbs: {
+        "trinken": { ich: "trinke", du: "trinkst", "er/sie/es": "trinkt", wir: "trinken", ihr: "trinkt", "sie/Sie": "trinken" },
+        "essen": { ich: "esse", du: "isst", "er/sie/es": "isst", wir: "essen", ihr: "esst", "sie/Sie": "essen" },
+        "wohnen": { ich: "wohne", du: "wohnst", "er/sie/es": "wohnt", wir: "wohnen", ihr: "wohnt", "sie/Sie": "wohnen" },
+        "haben": { ich: "habe", du: "hast", "er/sie/es": "hat", wir: "haben", ihr: "habt", "sie/Sie": "haben" },
+        "kommen": { ich: "komme", du: "kommst", "er/sie/es": "kommt", wir: "kommen", ihr: "kommt", "sie/Sie": "kommen" },
+        "arbeiten": { ich: "arbeite", du: "arbeitest", "er/sie/es": "arbeitet", wir: "arbeiten", ihr: "arbeitet", "sie/Sie": "arbeiten" },
+        "spielen": { ich: "spiele", du: "spielst", "er/sie/es": "spielt", wir: "spielen", ihr: "spielt", "sie/Sie": "spielen" },
+        "lernen": { ich: "lerne", du: "lernst", "er/sie/es": "lernt", wir: "lernen", ihr: "lernt", "sie/Sie": "lernen" },
+        "kochen": { ich: "koche", du: "kochst", "er/sie/es": "kocht", wir: "kochen", ihr: "kocht", "sie/Sie": "kochen" },
+        "sein": { ich: "bin", du: "bist", "er/sie/es": "ist", wir: "sind", ihr: "seid", "sie/Sie": "sind" },
+        "sprechen": { ich: "spreche", du: "sprichst", "er/sie/es": "spricht", wir: "sprechen", ihr: "sprecht", "sie/Sie": "sprechen" },
+        "helfen": { ich: "helfe", du: "hilfst", "er/sie/es": "hilft", wir: "helfen", ihr: "helft", "sie/Sie": "helfen" },
+        "können": { ich: "kann", du: "kannst", "er/sie/es": "kann", wir: "können", ihr: "könnt", "sie/Sie": "können" },
+        "gehen": { ich: "gehe", du: "gehst", "er/sie/es": "geht", wir: "gehen", ihr: "geht", "sie/Sie": "gehen" },
+        "machen": { ich: "mache", du: "machst", "er/sie/es": "macht", wir: "machen", ihr: "macht", "sie/Sie": "machen" }
+      }
+    };
+
+    // --- دالة توليد التصحيح المباشر لنفس جملة الطالب ---
+    function generateCorrectedUserSentence(text, targetWord) {
+      let corrected = text.trim();
+      
+      // 1. تصحيح حرف البداية ليصبح كبيراً
+      if (corrected.length > 0) {
+        corrected = corrected.charAt(0).toUpperCase() + corrected.slice(1);
+      }
+
+      // 2. تصحيح علامة الترقيم في النهاية لتصبح نقطة (أو علامة استفهام إن كانت طلب مهذب)
+      let lastChar = corrected.slice(-1);
+      if (lastChar !== '.' && lastChar !== '?' && lastChar !== '!') {
+        corrected += '.';
+      } else if (lastChar === '?' || lastChar === '!') {
+        // نتركها إن كانت سؤالاً مهذباً
+      } else {
+        corrected = corrected.slice(0, -1) + '.';
+      }
+
+      // 3. تصحيح الأفعال والضمائر داخل جملة الطالب نفسها
+      let words = corrected.split(/\s+/);
+      const pronouns = ["ich", "du", "er", "sie", "es", "wir", "ihr", "Sie"];
+
+      for (let i = 0; i < words.length; i++) {
+        let cleanW = words[i].replace(/[.,?!]/g, "").toLowerCase();
+        if (pronouns.includes(cleanW)) {
+          if (i + 1 < words.length) {
+            let nextW = words[i+1].replace(/[.,?!]/g, "").toLowerCase();
+            // البحث عن الفعل وتصحيحه بناءً على الضمير الموجود بجملة الطالب نفسها
+            for (let bv in A1GrammarRulesEngine.verbs) {
+              if (nextW.startsWith(bv.substring(0, 3))) {
+                let normP = cleanW;
+                if (cleanW === "er" || cleanW === "sie" || cleanW === "es") normP = "er/sie/es";
+                if (cleanW === "sie" && i > 0 && words[0].toLowerCase() !== "sie") normP = "sie/Sie";
+                
+                let correctVerbForm = A1GrammarRulesEngine.verbs[bv][normP] || A1GrammarRulesEngine.verbs[bv]["er/sie/es"];
+                // استبدال الفعل الخاطئ بالفعل الصحيح مع الحفاظ على علامات الترقيم إن وجدت
+                let punctuation = words[i+1].match(/[.,?!]+$/) ? words[i+1].match(/[.,?!]+$/)[0] : "";
+                words[i+1] = correctVerbForm + punctuation;
+                break;
+              }
+            }
+          }
+        }
+      }
+
+      // 4. تصحيح أدوات النكرة والنفي (ein/eine, kein/keine) مع الأسم الذي بعدها مباشرة في جملة الطالب
+      for (let i = 0; i < words.length; i++) {
+        let wLower = words[i].replace(/[.,?!]/g, "").toLowerCase();
+        if (wLower === "ein" || wLower === "eine" || wLower === "kein" || wLower === "keine") {
+          let isNeg = wLower.startsWith("kein");
+          if (i + 1 < words.length) {
+            let nounClean = words[i+1].replace(/[.,?!]/g, "").toLowerCase();
+            if (A1GrammarRulesEngine.nouns[nounClean]) {
+              let g = A1GrammarRulesEngine.nouns[nounClean].gender;
+              let punct = words[i].match(/[.,?!]+$/) ? words[i].match(/[.,?!]+$/)[0] : "";
+              if (g === "die") {
+                words[i] = (isNeg ? "keine" : "eine") + punct;
+              } else {
+                words[i] = (isNeg ? "kein" : "ein") + punct;
+              }
+            }
+          }
+        }
+      }
+
+      return words.join(" ");
+    }
+
+    // --- المحرك النحوي الشامل ---
+    function goetheInstitutValidator(text, targetWord, cardType) {
+      let errors = [];
+      let trimmed = text.trim();
+
+      if (!trimmed) {
+        return ["• الحقل فارغ تماماً. يرجى كتابة جملتك هنا."];
+      }
+
+      let firstChar = trimmed.charAt(0);
+      if (firstChar !== firstChar.toUpperCase() || !/[A-ZÄÖÜ]/.test(firstChar)) {
+        errors.push(`• قاعدة النحو (A1): يجب أن تبدأ الجملة دائماً بحرف كبير (Capital Letter)، وحرفك الأول '${firstChar}' صغير.`);
+      }
+
+      let lastChar = trimmed.slice(-1);
+      if (cardType === 'polite') {
+        if (lastChar !== '?') {
+          errors.push(`• قاعدة الترقيم للطلبات المهذبة: جملة الطلب تعتبر سؤالاً ويجب أن تنتهي بعلامة استفهام '?' وليس '${lastChar}'.`);
+        }
+      } else {
+        if (lastChar !== '.') {
+          errors.push(`• قاعدة الترقيم الخبرية: يجب أن تنتهي الجملة بنقطة '.' حسب قواعد بناء الجملة.`);
+        }
+      }
+
+      let cleanTarget = targetWord.trim();
+      let lowerTarget = cleanTarget.toLowerCase();
+      let lowerTrimmed = trimmed.toLowerCase();
+
+      let targetFound = false;
+      let isVerbTarget = A1GrammarRulesEngine.verbs[lowerTarget] !== undefined;
+
+      if (isVerbTarget) {
+        let verbObj = A1GrammarRulesEngine.verbs[lowerTarget];
+        let validForms = Object.values(verbObj);
+        for (let vf of validForms) {
+          if (lowerTrimmed.includes(vf)) {
+            targetFound = true;
+            break;
+          }
+        }
+        if (!targetFound && lowerTrimmed.includes(lowerTarget)) {
+          targetFound = true;
+        }
+      } else {
+        if (trimmed.includes(cleanTarget)) {
+          targetFound = true;
+        } else if (lowerTrimmed.includes(lowerTarget)) {
+          errors.push(`• قاعدة الأسماء والكلمات (A1): الكلمة '${cleanTarget}' هي اسم ويجب أن تُكتب بحرف كبير في بدايتها.`);
+        }
+      }
+
+      if (!targetFound) {
+        errors.push(`• قاعدة مفردات الجملة: الكلمة المطلوبة الأساسية '${cleanTarget}' غير موجودة أو لم توظف بشكل صحيح.`);
+      }
+
+      let tokens = trimmed.replace(/[.,\/#!$%\^&\*;:{}=\-_`~()?]/g, "").split(/\s+/);
+      let lowerTokens = tokens.map(t => t.toLowerCase());
+
+      const pronouns = ["ich", "du", "er", "sie", "es", "wir", "ihr", "Sie"];
+      
+      for (let i = 0; i < tokens.length; i++) {
+        let currentTok = tokens[i].toLowerCase();
+        
+        if (pronouns.includes(currentTok)) {
+          if (i + 1 < tokens.length) {
+            let potentialVerb = tokens[i+1].toLowerCase();
+            let matchedBaseVerb = null;
+            
+            for (let bv in A1GrammarRulesEngine.verbs) {
+              if (potentialVerb === bv || potentialVerb.startsWith(bv.substring(0, 3))) {
+                matchedBaseVerb = bv;
+                break;
+              }
+            }
+
+            if (matchedBaseVerb) {
+              let normPronoun = currentTok;
+              if (currentTok === "er" || currentTok === "sie" || currentTok === "es") normPronoun = "er/sie/es";
+              if (currentTok === "sie" && i > 0 && tokens[0].toLowerCase() !== "sie") normPronoun = "sie/Sie";
+              
+              let correctForm = A1GrammarRulesEngine.verbs[matchedBaseVerb][normPronoun] || A1GrammarRulesEngine.verbs[matchedBaseVerb]["er/sie/es"];
+              
+              if (tokens[i+1] !== correctForm) {
+                errors.push(`• قاعدة تصريف الأفعال الشاذة والمنتظمة: مع الضمير ('${currentTok}')، تصريف الفعل '${tokens[i+1]}' خطأ والصحيح وفق قاعدة الأفعال هو (${correctForm}).`);
+              }
+            }
+          }
+        }
+      }
+
+      for (let i = 0; i < lowerTokens.length; i++) {
+        let word = lowerTokens[i];
+        if (word === "ein" || word === "eine" || word === "kein" || word === "keine") {
+          let isNegative = word.startsWith("kein");
+          let isFeminineTool = word.endsWith("e");
+          
+          if (i + 1 < lowerTokens.length) {
+            let nextNoun = lowerTokens[i + 1];
+            if (A1GrammarRulesEngine.nouns[nextNoun]) {
+              let nounData = A1GrammarRulesEngine.nouns[nextNoun];
+              
+              if (nounData.gender === "die" && !isFeminineTool) {
+                errors.push(`• قاعدة أدوات التذكير والتأنيث: الاسم المؤنث '${tokens[i+1]}' يتبع قاعدة التأنيث ويأخذ (${isNegative ? 'keine' : 'eine'}) وليس (${word}).`);
+              } else if ((nounData.gender === "der" || nounData.gender === "das") && isFeminineTool) {
+                errors.push(`• قاعدة أدوات التذكير والتأنيث: الاسم (${nounData.gender === "der" ? "المذكر" : "المحايد"}) '${tokens[i+1]}' لا يأخذ أداة مؤنثة تنتهي بـ (-e)، والصحيح (${isNegative ? 'kein' : 'ein'}).`);
+              }
+            }
+          }
+        }
+      }
+
+      if (cardType === 'polite') {
+        let firstWord = tokens[0] || '';
+        if (firstWord.toLowerCase() !== 'können' && firstWord.toLowerCase() !== 'könnten') {
+          errors.push(`• قاعدة الطلب المهذب: الجملة تبدأ حصراً بالفعل المساعد 'Können' أو 'Könnten'.`);
+        }
+        let lastRealWord = tokens[tokens.length - 1] || '';
+        if (lastRealWord.toLowerCase() !== lowerTarget) {
+          errors.push(`• قاعدة ترتيب الكلمات (Satzbau): الفعل الأساسي '${cleanTarget}' يجب أن يأتي في نهاية السؤال تماماً.`);
+        }
+      }
+
+      return errors;
+    }
+
+    // --- قاموس المستوى الأول A1 الشامل ---
+    function buildRealA1Dictionary() {
+      return [
+        { de: "Wasser", ar: "ماء", sample: "Ich trinke gerne kaltes Wasser.", type: "normal" },
+        { de: "Apfel", ar: "تفاحة", sample: "Ich esse jeden Tag einen Apfel.", type: "normal" },
+        { de: "Kaffee", ar: "قهوة", sample: "Ich trinke morgens gerne Kaffee.", type: "normal" },
+        { de: "Tee", ar: "شاي", sample: "Er trinkt gerne heißen Tee.", type: "normal" },
+        { de: "Buch", ar: "كتاب", sample: "Das Buch ist sehr interessant.", type: "normal" },
+        { de: "Stift", ar: "قلم", sample: "Ich schreibe mit diesem Stift.", type: "normal" },
+        { de: "Auto", ar: "سيارة", sample: "Das Auto ist neu und schnell.", type: "normal" },
+        { de: "Haus", ar: "منزل", sample: "Unser Haus hat einen großen Garten.", type: "normal" },
+        { de: "Tisch", ar: "طاولة", sample: "Der Tisch ist aus Holz.", type: "normal" },
+        { de: "Stuhl", ar: "كرسي", sample: "Der Stuhl ist sehr bequem.", type: "normal" },
+        { de: "Katze", ar: "قطة", sample: "Meine Katze schläft auf dem Sofa.", type: "normal" },
+        { de: "Hund", ar: "كلب", sample: "Der Hund läuft im Park.", type: "normal" },
+        { de: "Berlin", ar: "برلين", sample: "Ich wohne in Berlin.", type: "normal" },
+        { de: "Arbeiten", ar: "يعمل (فعل)", sample: "Ich arbeite am Samstag.", type: "normal" },
+        { de: "Wohnen", ar: "يسكن (فعل)", sample: "Wir wohnen in Frankfurt.", type: "normal" },
+        { de: "Lernen", ar: "يتعلم (فعل)", sample: "Du lernst fleißig Deutsch.", type: "normal" },
+        { de: "Spielen", ar: "يلعب (فعل)", sample: "Die Kinder spielen im Garten.", type: "normal" },
+        { de: "Kochen", ar: "يطبخ (فعل)", sample: "Mein Vater kocht heute Abend.", type: "normal" },
+        { de: "Vater", ar: "الأب", sample: "Mein Vater arbeitet als Arzt.", type: "normal" },
+        { de: "Mutter", ar: "الأم", sample: "Meine Mutter kocht sehr gut.", type: "normal" },
+        { de: "Helfen", ar: "مساعدة", sample: "Können Sie mir bitte helfen?", type: "polite" },
+        { de: "Sprechen", ar: "تحدث", sample: "Können Sie bitte langsamer sprechen?", type: "polite" },
+        { de: "Wiederholen", ar: "إعادة", sample: "Können Sie das bitte wiederholen?", type: "polite" },
+        { de: "Erklären", ar: "شرح", sample: "Können Sie mir das bitte erklären?", type: "polite" },
+        { de: "Zeigen", ar: "إرشاد", sample: "Können Sie mir den Weg zeigen?", type: "polite" }
+      ];
+    }
+
+    const masterExamPool = buildRealA1Dictionary();
+
+    let currentExamCards = [];
+    let currentCardIndex = 0;
+    let usedCardIndices = new Set();
+
+    function initNewExam() {
+      if (usedCardIndices.size >= masterExamPool.length - 5) {
+        usedCardIndices.clear();
+      }
+
+      let availableIndices = [];
+      for (let i = 0; i < masterExamPool.length; i++) {
+        if (!usedCardIndices.has(i)) {
+          availableIndices.push(i);
+        }
+      }
+
+      availableIndices.sort(() => 0.5 - Math.random());
+
+      let selectedCards = [];
+      for (let i = 0; i < 5 && i < availableIndices.length; i++) {
+        let idx = availableIndices[i];
+        usedCardIndices.add(idx);
+        let rawItem = masterExamPool[idx];
+        
+        let cardType = rawItem.type || 'normal';
+        let noticeText = cardType === 'polite' 
+          ? `أدخل هذه الكلمة (${rawItem.de}) لطلب مهذب للمساعدة` 
+          : `أدخل هذه الكلمة (${rawItem.de}) بجملة صحيحة`;
+        
+        selectedCards.push({
+          word: rawItem.de,
+          translation: rawItem.ar,
+          type: cardType,
+          notice: noticeText,
+          validate: function(text) {
+            return goetheInstitutValidator(text, this.word, this.type);
+          }
+        });
+      }
+
+      currentExamCards = selectedCards;
+      currentCardIndex = 0;
+      loadCard(currentCardIndex);
+    }
+
+    function loadCard(index) {
+      if (index >= currentExamCards.length) return;
+
+      const card = currentExamCards[index];
+      document.getElementById('cardProgress').innerText = `الكارت ${index + 1} من ${currentExamCards.length}`;
+      document.getElementById('cardWord').innerText = card.word;
+      document.getElementById('cardTranslation').innerText = card.translation;
+      document.getElementById('noticeText').innerText = card.notice;
+      document.getElementById('userAnswer').value = '';
+      
+      document.getElementById('explanationBox').style.display = 'none';
+    }
+
+    function playAudioCurrentWord() {
+      const card = currentExamCards[currentCardIndex];
+      speakGerman(card.word);
+    }
+
+    function showToast(type, text) {
+      const toastSuccess = document.getElementById('toastSuccess');
+      const toastError = document.getElementById('toastError');
+
+      toastSuccess.style.display = 'none';
+      toastError.style.display = 'none';
+
+      if (type === 'success') {
+        toastSuccess.innerHTML = `<i class="fa-solid fa-circle-check"></i> ${text}`;
+        toastSuccess.style.display = 'block';
+        setTimeout(() => { toastSuccess.style.display = 'none'; }, 2200);
+      } else {
+        toastError.innerHTML = `<i class="fa-solid fa-circle-xmark"></i> ${text}`;
+        toastError.style.display = 'block';
+        setTimeout(() => { toastError.style.display = 'none'; }, 2500);
+      }
+    }
+
+    function checkAnswer() {
+      const userText = document.getElementById('userAnswer').value.trim();
+      const card = currentExamCards[currentCardIndex];
+
+      if (!userText) {
+        showToast('error', 'يرجى كتابة جملتك هنا أولاً!');
+        return;
+      }
+
+      const errors = card.validate(userText);
+      const expBox = document.getElementById('explanationBox');
+
+      if (errors.length === 0) {
+        playSound('correct');
+        expBox.style.display = 'none';
+        showToast('success', 'إجابة مثالية مطابقة لقواعد امتحان غوته! 🎉');
+
+        setTimeout(() => {
+          currentCardIndex++;
+          if (currentCardIndex < currentExamCards.length) {
+            loadCard(currentCardIndex);
+          } else {
+            alert("✨ مبروك! اجتزت جميع كروت الامتحان بنجاح تام 👏. اضغط على إعادة الامتحان لكلمات جديدة.");
+          }
+        }, 1800);
+
+      } else {
+        playSound('wrong');
+        showToast('error', 'وجدت أخطاء نحوية! راجع تصحيح جملتك بالأسفل');
+
+        let errorHtml = "<ul style='padding-right: 20px; margin-bottom: 10px;'>";
+        errors.forEach(err => {
+          errorHtml += `<li style="margin-bottom: 6px; color: #fca5a5;">${err}</li>`;
+        });
+        errorHtml += "</ul>";
+
+        document.getElementById('explanationText').innerHTML = errorHtml;
+        
+        // عرض جملة الطالب نفسها بعد تصحيحها نحوياً وإصلاح الأخطاء فيها مباشرة
+        let correctedUserSentence = generateCorrectedUserSentence(userText, card.word);
+        document.getElementById('correctSentenceText').innerText = correctedUserSentence;
+        expBox.style.display = 'block';
+      }
+    }
+
+    function resetExam() {
+      initNewExam();
+      showToast('success', 'تم توليد 5 كلمات جديدة من القاموس وقواعد المستوى الأول! 🔄');
+    }
+
+    function renderDictionary(data) {
+      const dictListContainer = document.getElementById('dictList');
+      dictListContainer.innerHTML = '';
+      document.getElementById('dictCount').innerText = `إجمالي الكلمات المعروضة: ${data.length} كلمة`;
+      data.forEach(item => {
+        const div = document.createElement('div');
+        div.className = 'dict-item';
+        div.innerHTML = `
+          <div class="dict-de">
+            <span>${item.de}</span>
+            <i class="fa-solid fa-volume-high audio-icon-small" onclick="speakGerman('${item.de.replace(/'/g, "\'")}')"></i>
+          </div>
+          <div class="dict-ar">${item.ar}</div>
+        `;
+        dictListContainer.appendChild(div);
+      });
+    }
+
+    function filterDictionary() {
+      const q = document.getElementById('dictSearch').value.toLowerCase().trim();
+      if (!q) { renderDictionary(masterExamPool); return; }
+      const filtered = masterExamPool.filter(item => item.de.toLowerCase().includes(q) || item.ar.includes(q));
+      renderDictionary(filtered);
+    }
+
+    function openDictionary() {
+      document.getElementById('dictModal').style.display = 'flex';
+      renderDictionary(masterExamPool);
+    }
+
+    function closeDictionary() {
+      document.getElementById('dictModal').style.display = 'none';
+    }
+
+    window.onload = () => {
+      initNewExam();
+    };
+  </script>
+</body>
+</html>
